@@ -17,18 +17,10 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Unit-Testing:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./Hardhat
     steps:
       - run: npm i hardhat
       - run: npx hardhat test
-  build-and-codechecks:
-    name: build and run codechecks
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: yarn
-        run: |
-          yarn install --frozen-lockfile
-
-          npx codechecks
-        env:
-          CC_SECRET: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9qZWN0U2VjcmV0IjoiYWIwYzQxNTQtZWYxZi00YzEyLThiMWUtZjc3ZWI1ZjgxZWFlIn0.y7wlpj5t4-ivylhum5SpoCHHFZhhDIRPVBr11cO-eHc
+ 
