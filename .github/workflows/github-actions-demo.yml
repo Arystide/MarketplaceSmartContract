@@ -4,8 +4,10 @@ jobs:
   Unit-Testing:
     runs-on: ubuntu-latest
     steps:
-      - run: cd /home/runner/work/MarketplaceSmartContract & npm i
-      - run: ls
-      - run: npm i
-      - run: npx hardhat test --show-stack-traces
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16.13.0'
+    - run: npm i
+    - run: npx hardhat test --show-stack-traces
  
