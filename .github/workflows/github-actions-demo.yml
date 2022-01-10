@@ -21,6 +21,6 @@ jobs:
       run:
         working-directory: ./
     steps:
-      - run: npm i hardhat
-      - run: npx hardhat test
+      - run: npm i hardhat --show-stack-traces
+      - run: npx hardhat test --show-stack-traces
  
