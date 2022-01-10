@@ -17,10 +17,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
   Unit-Testing:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./contracts
     steps:
-      - run: npm i hardhat --show-stack-traces
+      - run: npm i
       - run: npx hardhat test --show-stack-traces
  
