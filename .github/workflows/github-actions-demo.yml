@@ -18,6 +18,7 @@ jobs:
   Unit-Testing:
     runs-on: ubuntu-latest
     steps:
+      - run: npm i hardhat
       - run: npx hardhat test
   build-and-codechecks:
     name: build and run codechecks
