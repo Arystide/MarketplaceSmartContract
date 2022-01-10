@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./
+        working-directory: ./contracts
     steps:
       - run: npm i hardhat --show-stack-traces
       - run: npx hardhat test --show-stack-traces
