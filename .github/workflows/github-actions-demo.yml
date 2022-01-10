@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./Hardhat
+        working-directory: ./
     steps:
       - run: npm i hardhat
       - run: npx hardhat test
